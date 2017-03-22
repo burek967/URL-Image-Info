@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            com.enigmabridge.hibernate.dialect.SQLiteDialect
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:sqlite:db.sqlite
+        </property>
+        <property name="hibernate.connection.driver_class">
+            org.sqlite.JDBC
+        </property>
+        <property name="hbm2ddl.auto">
+            update
+        </property>
+        <mapping class="org.rburczynski.HistoryEntry" />
+    </session-factory>
+</hibernate-configuration>
